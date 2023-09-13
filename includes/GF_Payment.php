@@ -1,0 +1,27 @@
+<?php
+
+namespace MCS\Stax;
+
+class GF_Payment
+{
+    public function __construct()
+    {
+        // Actions
+        add_action('gform_after_submission', [$this, 'add_note_to_entry'], 10, 2);
+
+        // Filters
+        add_filter('gform_submit_button', [$this, 'hide_submit_button'], 10, 2);
+    }
+
+    public function add_note_to_entry($entry, $form)
+    {
+        $note = 'Payment successful'; // set the note text
+        // \GFAPI::add_note($entry['id'], $entry['form_id'], $note); // add the note to the entry
+        \GFAPI::add_note($entry['id'], $user_id = false, $user_name = "MCS Stax Payment", $note, $note_type = 'mcs_stax', $sub_type = null);
+    }
+
+    public function hide_submit_button($button, $form)
+    {
+        return '';
+    }
+}

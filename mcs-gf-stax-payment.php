@@ -35,3 +35,17 @@ spl_autoload_register(function ($class) {
 
 define('MCS_STAX_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('MCS_STAX_PLUGIN_URL', plugin_dir_url(__FILE__));
+
+// check if GRAVITY_FORMS_PLUGIN_URL is defined
+if (!defined('GRAVITY_FORMS_PLUGIN_URL')) {
+    define('GRAVITY_FORMS_PLUGIN_URL', WP_PLUGIN_URL . '/gravityforms');
+}
+
+// include the gravity forms library
+// require_once GRAVITY_FORMS_PLUGIN_URL . '/forms_model.php';
+// require_once GRAVITY_FORMS_PLUGIN_URL . '/form_display.php';
+// require_once GRAVITY_FORMS_PLUGIN_URL . '/entry_list.php';
+
+// require_once './includes/Payment.php';
+
+$init = new \MCS\Stax\Init();
