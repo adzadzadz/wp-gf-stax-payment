@@ -14,10 +14,10 @@ class Init {
         }
 
         add_action( 'wp_enqueue_scripts', function() {
-            wp_enqueue_script( 'mcs-stax-api', 'https://staxjs.staxpayments.com/stax.js?nocache=2', array(), null, false );
-            wp_enqueue_script( 'mcs-stax-payment-field-js', MCS_STAX_PLUGIN_URL . 'assets/js/mcs_stax_payment_field.js', array(), null, false );
+            wp_enqueue_script( 'mcs-stax-api', 'https://staxjs.staxpayments.com/stax.js', array(), null, false );
+            wp_enqueue_script( 'mcs-stax-payment-field-js', MCS_STAX_PLUGIN_URL . 'assets/js/mcs_stax_payment_field.js', array('mcs-stax-api'), random_int(000, 999), false );
             // enqueue styles
-            wp_enqueue_style( 'mcs-stax-css', MCS_STAX_PLUGIN_URL . 'assets/css/mcs_stax_payment_field.css', array(), null, 'all' );
+            wp_enqueue_style( 'mcs-stax-css', MCS_STAX_PLUGIN_URL . 'assets/css/mcs_stax_payment_field.css', array(), random_int(000, 999), 'all' );
         });
         
         require_once __DIR__ . '/GF_Payment_Field.php';
