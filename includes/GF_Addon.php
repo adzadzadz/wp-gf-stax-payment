@@ -1,6 +1,6 @@
 <?php
 
-namespace MCS\Stax;
+namespace adz\Stax;
 
 \GFForms::include_addon_framework();
 
@@ -8,8 +8,8 @@ class GF_Addon extends \GFAddOn {
 
 	protected $_version = '0.1.0';
 	protected $_min_gravityforms_version = '1.9';
-	protected $_slug = 'mcs-gf-stax-payment';
-	protected $_path = 'mcs-gf-stax-payment/mcs-gf-stax-payment.php';
+	protected $_slug = 'adz-gf-stax-payment';
+	protected $_path = 'adz-gf-stax-payment/adz-gf-stax-payment.php';
 	protected $_full_path = __FILE__;
 	protected $_title = 'Gravity Forms Simple Field Add-On';
 	protected $_short_title = 'Simple Field Add-On';
@@ -107,7 +107,7 @@ class GF_Addon extends \GFAddOn {
 	 */
 	public function tooltips( $tooltips ) {
 		$simple_tooltips = array(
-			'input_class_setting' => sprintf( '<h6>%s</h6>%s', esc_html__( 'Input CSS Classes', 'mcs-gf-stax-payment' ), esc_html__( 'The CSS Class names to be added to the field input.', 'mcs-gf-stax-payment' ) ),
+			'input_class_setting' => sprintf( '<h6>%s</h6>%s', esc_html__( 'Input CSS Classes', 'adz-gf-stax-payment' ), esc_html__( 'The CSS Class names to be added to the field input.', 'adz-gf-stax-payment' ) ),
 		);
 
 		return array_merge( $tooltips, $simple_tooltips );
@@ -125,7 +125,7 @@ class GF_Addon extends \GFAddOn {
 			?>
 			<li class="input_class_setting field_setting">
 				<label for="input_class_setting">
-					<?php esc_html_e( 'Input CSS Classes', 'mcs-gf-stax-payment' ); ?>
+					<?php esc_html_e( 'Input CSS Classes', 'adz-gf-stax-payment' ); ?>
 					<?php gform_tooltip( 'input_class_setting' ) ?>
 				</label>
 				<input id="input_class_setting" type="text" class="fieldwidth-1" onkeyup="SetInputClassSetting(jQuery(this).val());" onchange="SetInputClassSetting(jQuery(this).val());"/>

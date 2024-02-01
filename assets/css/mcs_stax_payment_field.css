@@ -1,4 +1,4 @@
-/* .mcs_stax_field_group {
+/* .adz_stax_field_group {
     background: white;
     box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10),
     0 3px 6px 0 rgba(0, 0, 0, 0.08);
@@ -17,7 +17,7 @@ label {
     flex-direction: row;
 }
 
-.mcs_stax_field_group label:not(:last-child) {
+.adz_stax_field_group label:not(:last-child) {
     border-bottom: 1px solid #F0F5FA;
 }
 
@@ -27,7 +27,7 @@ label>span {
     margin-right: 30px;
 }
 
-.mcs_stax_field {
+.adz_stax_field {
     background: transparent;
     font-weight: 300;
     border: 0;
@@ -39,11 +39,11 @@ label>span {
     cursor: text;
 }
 
-.mcs_stax_field::-webkit-input-placeholder {
+.adz_stax_field::-webkit-input-placeholder {
     color: #CFD7E0;
 }
 
-.mcs_stax_field::-moz-placeholder {
+.adz_stax_field::-moz-placeholder {
     color: #CFD7E0;
 } */
 

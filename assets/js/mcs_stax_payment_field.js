@@ -1,6 +1,6 @@
 
 // Create js class
-class Mcs_Stax_Payment_Field {
+class adz_Stax_Payment_Field {
 
   stax_api_config_mode = 'live'; // 'sandbox' or 'live
   stax_api_key_live = 'Balloon-Artistry-8f7ce18b661d';
@@ -13,7 +13,7 @@ class Mcs_Stax_Payment_Field {
 
   // Constructor
   constructor(form_id, field_element_id, field_id) {
-    console.log('McsStaxPaymentField constructor');
+    console.log('adzStaxPaymentField constructor');
     this.form_id = form_id;
     this.form_element_id = 'gform_' + form_id;
     this.form = document.getElementById(this.form_element_id);
@@ -25,7 +25,7 @@ class Mcs_Stax_Payment_Field {
 
   // Init
   init() {
-    console.log('McsStaxPaymentField init', this.stax_api_config_mode);
+    console.log('adzStaxPaymentField init', this.stax_api_config_mode);
     this.set_form_values();
     this.ui_elements();
     this.activate_stax_payment_field();
@@ -68,31 +68,31 @@ class Mcs_Stax_Payment_Field {
 
   set_form_values() {
     // Form values
-    this.first_name = jQuery(this.form).find('.mcs_stax_field[name="first-name"]').val();
-    this.last_name = jQuery(this.form).find('.mcs_stax_field[name="last-name"]').val();
+    this.first_name = jQuery(this.form).find('.adz_stax_field[name="first-name"]').val();
+    this.last_name = jQuery(this.form).find('.adz_stax_field[name="last-name"]').val();
     this.person_name = jQuery(this.form).find('#input_5_22').val();
 
     console.log('person_name', this.person_name);
-    // this.email = jQuery(this.form).find('.mcs_stax_field[name="email"]').val();
+    // this.email = jQuery(this.form).find('.adz_stax_field[name="email"]').val();
     this.email = jQuery(this.form).find('#input_5_3').val();
 
-    this.phone = jQuery(this.form).find('.mcs_stax_field[name="phone"]').val();
-    this.company = jQuery(this.form).find('.mcs_stax_field[name="company"]').val();
-    this.address_1 = jQuery(this.form).find('.mcs_stax_field[name="address_1"]').val();
-    this.address_2 = jQuery(this.form).find('.mcs_stax_field[name="address_2"]').val();
-    this.address_city = jQuery(this.form).find('.mcs_stax_field[name="address_city"]').val();
-    this.address_state = jQuery(this.form).find('.mcs_stax_field[name="address_state"]').val();
-    this.address_zip = jQuery(this.form).find('.mcs_stax_field[name="address_zip"]').val();
-    this.address_country = jQuery(this.form).find('.mcs_stax_field[name="address_country"]').val();
-    this.notes = jQuery(this.form).find('.mcs_stax_field[name="notes"]').val();
+    this.phone = jQuery(this.form).find('.adz_stax_field[name="phone"]').val();
+    this.company = jQuery(this.form).find('.adz_stax_field[name="company"]').val();
+    this.address_1 = jQuery(this.form).find('.adz_stax_field[name="address_1"]').val();
+    this.address_2 = jQuery(this.form).find('.adz_stax_field[name="address_2"]').val();
+    this.address_city = jQuery(this.form).find('.adz_stax_field[name="address_city"]').val();
+    this.address_state = jQuery(this.form).find('.adz_stax_field[name="address_state"]').val();
+    this.address_zip = jQuery(this.form).find('.adz_stax_field[name="address_zip"]').val();
+    this.address_country = jQuery(this.form).find('.adz_stax_field[name="address_country"]').val();
+    this.notes = jQuery(this.form).find('.adz_stax_field[name="notes"]').val();
 
-    this.bank_name = jQuery(this.form).find('.mcs_stax_field[name="bank-name"]').val();
-    this.account_number = jQuery(this.form).find('.mcs_stax_field[name="account-number"]').val();
-    this.routing_number = jQuery(this.form).find('.mcs_stax_field[name="routing-number"]').val();
+    this.bank_name = jQuery(this.form).find('.adz_stax_field[name="bank-name"]').val();
+    this.account_number = jQuery(this.form).find('.adz_stax_field[name="account-number"]').val();
+    this.routing_number = jQuery(this.form).find('.adz_stax_field[name="routing-number"]').val();
     // get the account type that is checked
-    this.account_type = jQuery(this.form).find('.mcs_stax_field_radio[name="account-type"]:checked').val();
+    this.account_type = jQuery(this.form).find('.adz_stax_field_radio[name="account-type"]:checked').val();
     // get the bank holder type that is checked
-    this.bank_holder_type = jQuery(this.form).find('.mcs_stax_field_radio[name="bank-holder-type"]:checked').val();
+    this.bank_holder_type = jQuery(this.form).find('.adz_stax_field_radio[name="bank-holder-type"]:checked').val();
   }
 
   ui_elements() {
@@ -143,7 +143,7 @@ class Mcs_Stax_Payment_Field {
 
   get_total() {
     // use jquery
-    let total_query = `#${this.form_element_id} .mcs_stax_field_group_${this.form_id} #paybutton`;
+    let total_query = `#${this.form_element_id} .adz_stax_field_group_${this.form_id} #paybutton`;
     let total = jQuery(total_query).data("total");
     console.log('total', total);
     // remove the currency
@@ -152,7 +152,7 @@ class Mcs_Stax_Payment_Field {
   }
 
   set_button_total(total) {
-    let pay_button_query = `#${this.form_element_id} .mcs_stax_field_group_${this.form_id} #paybutton`;
+    let pay_button_query = `#${this.form_element_id} .adz_stax_field_group_${this.form_id} #paybutton`;
     let pay_button = jQuery(pay_button_query);
     let button_text = total.includes('$') ? 'Pay ' + total : 'Pay $' + total;
 

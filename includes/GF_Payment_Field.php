@@ -1,10 +1,10 @@
 <?php
 
-namespace MCS\Stax;
+namespace adz\Stax;
 
 class GF_Payment_Field extends \GF_Field
 {
-    public $type = 'mcs_stax_payment';
+    public $type = 'adz_stax_payment';
 
 
     /**
@@ -68,26 +68,26 @@ class GF_Payment_Field extends \GF_Field
 				{$disabled_text}/>
 
 			<div class="gfield_div gform-field-label">Bank Account</div>
-			<div class="mcs_stax_field_group mcs-stax-bank-account-details ">
+			<div class="adz_stax_field_group adz-stax-bank-account-details ">
 
 				<div class="gfield--width-full">
 					<label><span>Bank Name</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="bank-name" class="mcs_stax_field large" placeholder="" value="">
+						<input type="text" name="bank-name" class="adz_stax_field large" placeholder="" value="">
 					</div>
 				</div>
 
 				<div class="gfield--width-half">
 					<label><span>Account #</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="account-number" class="mcs_stax_field large" placeholder="" value="" />
+						<input type="text" name="account-number" class="adz_stax_field large" placeholder="" value="" />
 					</div>
 				</div>
 
 				<div class="gfield--width-half">
 					<label><span>Routing #</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="routing-number" class="mcs_stax_field large" placeholder="" value="" />
+						<input type="text" name="routing-number" class="adz_stax_field large" placeholder="" value="" />
 					</div>
 				</div>
 
@@ -97,13 +97,13 @@ class GF_Payment_Field extends \GF_Field
 						<div class="gfield_radio">
 							<!-- Account Type radio button -->
 							<div class="gchoice">
-								<input type="radio" class="mcs_stax_field_radio gfield-choice-input" name="account-type" value="savings">
+								<input type="radio" class="adz_stax_field_radio gfield-choice-input" name="account-type" value="savings">
 								<label class="gform-field-label gform-field-label--type-inline">
 									Savings
 								</label>
 							</div>
 							<div class="gchoice">
-								<input type="radio" class="mcs_stax_field_radio gfield-choice-input" name="account-type" value="checking" checked>
+								<input type="radio" class="adz_stax_field_radio gfield-choice-input" name="account-type" value="checking" checked>
 								<label class="gform-field-label gform-field-label--type-inline">
 									Checking
 								</label>
@@ -118,13 +118,13 @@ class GF_Payment_Field extends \GF_Field
 						<div class="gfield_radio">
 							<!-- Bank Holder Type -->
 							<div class="gchoice">
-								<input type="radio" class="mcs_stax_field_radio gfield-choice-input" name="bank-holder-type" value="personal">
+								<input type="radio" class="adz_stax_field_radio gfield-choice-input" name="bank-holder-type" value="personal">
 								<label class="gform-field-label gform-field-label--type-inline">
 									Personal
 								</label>
 							</div>
 							<div class="gchoice">
-								<input type="radio" class="mcs_stax_field_radio gfield-choice-input" name="bank-holder-type" value="business" checked>
+								<input type="radio" class="adz_stax_field_radio gfield-choice-input" name="bank-holder-type" value="business" checked>
 								<label class="gform-field-label gform-field-label--type-inline">
 									Business
 								</label>
@@ -135,70 +135,70 @@ class GF_Payment_Field extends \GF_Field
 			</div>
 
 			<!-- <label class="gfield_div gform-field-label">Billing Details</label> -->
-			<!-- <div class="mcs_stax_field_group"> -->
+			<!-- <div class="adz_stax_field_group"> -->
 				<!-- <div class="gfield--width-full">	
 					<label><span>First Name</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="first-name" class="mcs_stax_field large" placeholder="" value=""/>
+						<input type="text" name="first-name" class="adz_stax_field large" placeholder="" value=""/>
 					</div>
 				</div>
 				<div class="gfield--width-full">
 					<label><span>Last Name</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="last-name" class="mcs_stax_field large" placeholder="" value=""/>
+						<input type="text" name="last-name" class="adz_stax_field large" placeholder="" value=""/>
 					</div>
 				</div>
 				<div class="gfield--width-full">
 					<label><span>Email</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="email" class="mcs_stax_field large" placeholder="" value=""/>
+						<input type="text" name="email" class="adz_stax_field large" placeholder="" value=""/>
 					</div>
 				</div> -->
 				<!-- <label>
 					<span>Phone</span>
-					<input name="phone" class="mcs_stax_field" placeholder="5555555555" value=""/>
+					<input name="phone" class="adz_stax_field" placeholder="5555555555" value=""/>
 				</label>
 				<label>
 					<span>Company</span>
-					<input name="company" class="mcs_stax_field" placeholder="Company INC" value=""/>
+					<input name="company" class="adz_stax_field" placeholder="Company INC" value=""/>
 				</label>
 				<label>
 					<span>Address 1</span>
-					<input name="address_1" class="mcs_stax_field" placeholder="100 S Orange Ave" value=""/>
+					<input name="address_1" class="adz_stax_field" placeholder="100 S Orange Ave" value=""/>
 				</label>
 				<label>
 					<span>Address 2</span>
-					<input name="address_2" class="mcs_stax_field" placeholder="" value=""/>
+					<input name="address_2" class="adz_stax_field" placeholder="" value=""/>
 				</label>
 				<label>
 					<span>City</span>
-					<input name="address_city" class="mcs_stax_field" placeholder="Orlando" value=""/>
+					<input name="address_city" class="adz_stax_field" placeholder="Orlando" value=""/>
 				</label>
 				<label>
 					<span>State</span>
-					<input name="address_state" class="mcs_stax_field" placeholder="FL" value=""/>
+					<input name="address_state" class="adz_stax_field" placeholder="FL" value=""/>
 				</label>
 				<label>
 					<span>Zip</span>
-					<input name="address_zip" class="mcs_stax_field" placeholder="32811" value=""/>
+					<input name="address_zip" class="adz_stax_field" placeholder="32811" value=""/>
 				</label>
 				<label>
 					<span>Country</span>
-					<input name="address_country" class="mcs_stax_field" placeholder="USA" value=""/>
+					<input name="address_country" class="adz_stax_field" placeholder="USA" value=""/>
 				</label> -->
 				<!-- <div class="gfield gfield--width-full">
 					<label><span>Notes</span></label>
 					<div class="ginput_container ginput_container_text">
-						<input type="text" name="notes" class="mcs_stax_field large" placeholder="" value=""/>
+						<input type="text" name="notes" class="adz_stax_field large" placeholder="" value=""/>
 					</div>
 				</div> -->
 			<!-- </div> -->
 
-			<div class="mcs_stax_field_group mcs_stax_field_group_{$form_id}">
+			<div class="adz_stax_field_group adz_stax_field_group_{$form_id}">
 				<button id="paybutton" data-total="0" style="display: none;">Pay $0.00</button>
 			</div>
 
-			<div class="mcs_stax_field_group mcs_stax_field_group_{$form_id}">
+			<div class="adz_stax_field_group adz_stax_field_group_{$form_id}">
 				<div class="outcome">
 					<div class="error"></div>
 					<div class="success">
@@ -239,7 +239,7 @@ class GF_Payment_Field extends \GF_Field
 		$field_id = $form_id == 0 ? "input_$id" : 'input_' . $form_id . "_$id";
 
 		return <<<JS
-			new Mcs_Stax_Payment_Field({$form_id}, '{$field_id}', {$id});
+			new adz_Stax_Payment_Field({$form_id}, '{$field_id}', {$id});
 		JS;
 	}
 

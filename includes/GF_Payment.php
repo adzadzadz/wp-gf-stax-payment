@@ -1,6 +1,6 @@
 <?php
 
-namespace MCS\Stax;
+namespace adz\Stax;
 
 class GF_Payment
 {
@@ -19,7 +19,7 @@ class GF_Payment
     {
         $note = 'Payment successful'; // set the note text
         // \GFAPI::add_note($entry['id'], $entry['form_id'], $note); // add the note to the entry
-        \GFAPI::add_note($entry['id'], $user_id = false, $user_name = "MCS Stax Payment", $note, $note_type = 'mcs_stax', $sub_type = null);
-        \GFAPI::send_notifications( $form, $entry, 'complete_payment' );
+        \GFAPI::add_note($entry['id'], $user_id = false, $user_name = "adz Stax Payment", $note, $note_type = 'adz_stax', $sub_type = null);
+        // \GFAPI::send_notifications( $form, $entry, 'complete_payment' );
     }
 }

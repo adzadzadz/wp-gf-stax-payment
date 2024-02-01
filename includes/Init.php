@@ -1,6 +1,6 @@
 <?php 
 
-namespace MCS\Stax;
+namespace adz\Stax;
 
 class Init {
 
@@ -14,10 +14,10 @@ class Init {
         }
 
         add_action( 'wp_enqueue_scripts', function() {
-            wp_enqueue_script( 'mcs-stax-api', 'https://staxjs.staxpayments.com/stax.js', array(), null, false );
-            wp_enqueue_script( 'mcs-stax-payment-field-js', MCS_STAX_PLUGIN_URL . 'assets/js/mcs_stax_payment_field.js', array('mcs-stax-api'), random_int(000, 999), false );
+            wp_enqueue_script( 'adz-stax-api', 'https://staxjs.staxpayments.com/stax.js', array(), null, false );
+            wp_enqueue_script( 'adz-stax-payment-field-js', ADZ_STAX_PLUGIN_URL . 'assets/js/adz_stax_payment_field.js', array('adz-stax-api'), random_int(000, 999), false );
             // enqueue styles
-            wp_enqueue_style( 'mcs-stax-css', MCS_STAX_PLUGIN_URL . 'assets/css/mcs_stax_payment_field.css', array(), random_int(000, 999), 'all' );
+            wp_enqueue_style( 'adz-stax-css', ADZ_STAX_PLUGIN_URL . 'assets/css/adz_stax_payment_field.css', array(), random_int(000, 999), 'all' );
         });
         
         require_once __DIR__ . '/GF_Payment_Field.php';
